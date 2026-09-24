@@ -1,15 +1,18 @@
 
-
+let usuario;
+let contrasena;
 let intentos= 3;
- validarAcceso();
+ validarAcceso(usuario, contrasena);
 
-function validarAcceso () { 
+function validarAcceso (usuario, contrasena ) { 
 
   const CONTRASENA_CORRECTA = "1234";
-const USUARIO_CORRECTO = "admin";
+  const USUARIO_CORRECTO = "admin";
+
  while (intentos > 0) {
-    let usuario = prompt("ingrese el usuario");
-    let contrasena = prompt("ingrese el contraseña");
+    
+    usuario = prompt("ingrese el usuario");
+    contrasena = prompt("ingrese el contraseña");
 
     if(contrasena===CONTRASENA_CORRECTA && usuario===USUARIO_CORRECTO) {
         alert("el usuario y contraseña son correctos");
