@@ -1,17 +1,17 @@
-let usuario;
-let contrasena;
-let intentos= 3;
 
+
+let intentos= 3;
+ validarAcceso();
 
 function validarAcceso () { 
-const CONTRASENA_CORRECTO = "1234";
+
+const CONTRASENA_CORRECTA = "1234";
 const USUARIO_CORRECTO = "admin";
+ while (intentos > 0) {
+    let usuario = prompt("ingrese el usuario");
+    let contrasena = prompt("ingrese el contrasena")
 
- while (intentos < 0) {
-    usuario = prompt("ingrese el usuario");
-    contrasena = prompt("ingrese el contrasena")
-
-    if(contrasena===CONTRASENA_CORRECTO && usuario===USUARIO_CORRECTO) {
+    if(contrasena===CONTRASENA_CORRECTA && usuario===USUARIO_CORRECTO) {
         alert("el usuario y contraseña son correctos")
         console.log("¡Bienvenido al sistema!");
         return ;
@@ -21,6 +21,6 @@ const USUARIO_CORRECTO = "admin";
          alert(`le quedan ${intentos} intentos`)
     }
 }
-    console.log(" ")
+    alert("Usuario bloqueado. Ha superado el número de intentos. ")
 } 
- validarAcceso();
+ 
